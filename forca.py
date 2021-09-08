@@ -9,13 +9,13 @@ def jogar():
     acertou = False
 
     while not enforcou and not acertou:
-        print('jogando....')
-        palavra = input()
-        if palavra == palavra_secreta:
-            acertou = True
-            print('Parabéns! palavra correta')
-        else:
-            print('Palavra incorreta, tente novamente')
+        
+        chute = input('Qual a letra? ')
+        index = 0 
+        for letra in palavra_secreta:
+            if chute == letra:
+                print(f"Encontrei a letra {chute} na posição {index}")
+            index += 1
 
     print('Fim do jogo')
     
